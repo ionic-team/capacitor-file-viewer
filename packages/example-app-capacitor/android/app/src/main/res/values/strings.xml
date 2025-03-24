@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CAP-FLVW Sample</string>
+    <string name="title_activity_main">CAP-FLVW Sample</string>
+    <string name="package_name">com.capacitorjs.exampleucapp.plugins.fileviewer</string>
+    <string name="custom_url_scheme">com.capacitorjs.exampleucapp.plugins.fileviewer</string>
+</resources>

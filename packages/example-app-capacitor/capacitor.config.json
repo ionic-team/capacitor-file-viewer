@@ -1,0 +1,10 @@
+{
+  "appId": "com.capacitorjs.exampleucapp.plugins.fileviewer",
+  "appName": "CAP-FLVW Sample",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
