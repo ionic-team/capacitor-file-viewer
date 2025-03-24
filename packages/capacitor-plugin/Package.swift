@@ -3,14 +3,14 @@ import PackageDescription
 
 let package = Package(
     name: "CapacitorFileViewer",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "CapacitorFileViewer",
             targets: ["FileViewerPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "main")
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "7.0.0")
     ],
     targets: [
         .target(
