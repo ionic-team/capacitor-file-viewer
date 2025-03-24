@@ -23,7 +23,7 @@
     "Package.swift",
     "CapacitorFileViewer.podspec"
   ],
-  "author": "Outsystems",
+  "author": "Ionic",
   "license": "MIT",
   "repository": {
     "type": "git",
