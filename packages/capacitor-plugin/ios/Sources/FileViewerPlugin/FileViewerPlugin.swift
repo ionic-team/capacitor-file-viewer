@@ -39,7 +39,7 @@ private extension FileViewerPlugin {
             do {
                 try service.openDocumentFromLocalPath(filePath: filePath ?? "", completion: { call.resolve() })
             } catch {
-                sendError(call, mapError(error))
+                self.sendError(call, self.mapError(error))
             }
         })
     }
@@ -50,7 +50,7 @@ private extension FileViewerPlugin {
             do {
                 try service.openDocumentFromResources(assetPath: resourcePath ?? "", completion: { call.resolve() })
             } catch {
-                sendError(call, mapError(error))
+                self.sendError(call, self.mapError(error))
             }
         })
     }
@@ -67,7 +67,7 @@ private extension FileViewerPlugin {
                     }
                 })
             } catch {
-                sendError(call, mapError(error))
+                self.sendError(call, self.mapError(error))
             }
         })
     }
@@ -79,7 +79,7 @@ private extension FileViewerPlugin {
                 try service.previewMediaContentFromLocalPath(filePath: filePath ?? "")
                 call.resolve()
             } catch {
-                sendError(call, mapError(error))
+                self.sendError(call, self.mapError(error))
             }
         })
     }
@@ -91,7 +91,7 @@ private extension FileViewerPlugin {
                 try service.previewMediaContentFromResources(assetPath: resourcePath ?? "")
                 call.resolve()
             } catch {
-                sendError(call, mapError(error))
+                self.sendError(call, self.mapError(error))
             }
         })
     }
@@ -103,12 +103,12 @@ private extension FileViewerPlugin {
                 try service.previewMediaContentFromUrl(url: url ?? "")
                 call.resolve()
             } catch {
-                sendError(call, mapError(error))
+                self.sendError(call, self.mapError(error))
             }
         })
     }
 
-    func executeOperation(_ call: CAPPluginCall, operationRunner: (FileViewerService) -> Void) {
+    func executeOperation(_ call: CAPPluginCall, operationRunner: @escaping (FileViewerService) -> Void) {
         switch getService() {
         case .success(let service): DispatchQueue.main.async {
             operationRunner(service)
