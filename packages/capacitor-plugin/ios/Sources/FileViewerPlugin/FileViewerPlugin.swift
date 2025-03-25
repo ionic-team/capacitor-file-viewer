@@ -18,13 +18,13 @@ public class FileViewerPlugin: CAPPlugin, CAPBridgedPlugin {
     ]
 
     private var fileViewer: FileViewerService?
-    
+
     override public func load() {
         if let viewController = self.bridge?.viewController as? UIViewController {
             fileViewer = IONFLVWManager(viewController: viewController)
         }
     }
-    
+
     func getService() -> Result<FileViewerService, FileViewerError> {
         if fileViewer == nil { load() }
         return fileViewer.map(Result.success) ?? .failure(.bridgeNotInitialised)
@@ -43,7 +43,7 @@ private extension FileViewerPlugin {
             }
         })
     }
-    
+
     @objc func openDocumentFromResources(_ call: CAPPluginCall) {
         let resourcePath = call.getString("path")
         executeOperation(call, operationRunner: { service in
@@ -54,7 +54,7 @@ private extension FileViewerPlugin {
             }
         })
     }
-    
+
     @objc func openDocumentFromUrl(_ call: CAPPluginCall) {
         let url = call.getString("url")
         executeOperation(call, operationRunner: { service in
@@ -71,7 +71,7 @@ private extension FileViewerPlugin {
             }
         })
     }
-    
+
     @objc func previewMediaContentFromLocalPath(_ call: CAPPluginCall) {
         let filePath = call.getString("path")
         executeOperation(call, operationRunner: { service in
@@ -83,7 +83,7 @@ private extension FileViewerPlugin {
             }
         })
     }
-    
+
     @objc func previewMediaContentFromResources(_ call: CAPPluginCall) {
         let resourcePath = call.getString("path")
         executeOperation(call, operationRunner: { service in
@@ -95,7 +95,7 @@ private extension FileViewerPlugin {
             }
         })
     }
-    
+
     @objc func previewMediaContentFromUrl(_ call: CAPPluginCall) {
         let url = call.getString("url")
         executeOperation(call, operationRunner: { service in
@@ -107,19 +107,21 @@ private extension FileViewerPlugin {
             }
         })
     }
-    
+
     func executeOperation(_ call: CAPPluginCall, operationRunner: (FileViewerService) -> Void) {
         switch getService() {
-        case .success(let service): operationRunner(service)
+        case .success(let service): DispatchQueue.main.async {
+            operationRunner(service)
+        }
         case .failure(let error): sendError(call, error)
         }
     }
-    
+
     func sendError(_ call: CAPPluginCall, _ error: FileViewerError) {
         let errorPair = error.toCodeMessagePair()
         call.reject(errorPair.message, errorPair.code)
     }
-    
+
     func mapError(_ error: Error, url: String = "") -> FileViewerError {
         return switch error {
         case IONFLVWError.fileDoesNotExist: .fileDoesNotExist
@@ -128,7 +130,7 @@ private extension FileViewerPlugin {
         case IONFLVWError.invalidEmptyURL: .urlEmpty
         case IONFLVWError.downloadFailed: .downloadFailed
         case IONFLVWError.missingFileExtension: .missingFileExtension
-        default : .couldNotOpenDocument
+        default: .couldNotOpenDocument
         }
     }
 }

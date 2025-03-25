@@ -1,4 +1,3 @@
-
 enum FileViewerError: Error {
     case fileDoesNotExist
     case urlMalformed(url: String)
