@@ -1,5 +1,36 @@
 # @capacitor/file-viewer
 
+The FileViewer API provides mechanisms for opening files and previewing media. Not available on web.
+
+The media preview methods are currently only supported on iOS. It uses a built-in player.
+
+## Install
+
+```bash
+npm install @capacitor/file-viewer
+npx cap sync
+```
+
+## Example
+
+```typescript
+import { FileViewer } from "@capacitor/file-viewer";
+
+// can use a plugin @capacitor/filesystem to get the full path to the file
+const openDocument = async () => {
+  await FileViewer.openDocumentFromLocalPath({
+    path: "path/to/file.pdf"
+  });
+};
+
+// ios-specific
+const previewMedia = async () => {
+  await FileViewer.previewMediaFromUrl({
+    path: "https://url_hosting_media/file.mp4"
+  });
+}
+```
+
 ## API
 
 <docgen-index>
@@ -174,4 +205,17 @@ Only implemented in iOS. Android defaults to `openDocumentFromUrl`.
 
 ### Errors
 
+The plugin returns the following errors with specific codes on native Android and iOS:
 
+| Error code        | Platform(s)      | Message                      |
+|-------------------|------------------|------------------------------|
+| OS-PLUG-FLVW-0004 | Android, iOS     | The file you are trying to open does not exist. |
+| OS-PLUG-FLVW-0005 | Android, iOS     | The URL you are trying to open is malformed. |
+| OS-PLUG-FLVW-0006 | Android, iOS     | Path of the file to open is either null or empty. |
+| OS-PLUG-FLVW-0007 | Android, iOS     | URL to open is either null or empty. |
+| OS-PLUG-FLVW-0008 | Android, iOS     | Could not open the file. |
+| OS-PLUG-FLVW-0009 | Android, iOS     | Invalid parameters. |
+| OS-PLUG-FLVW-0010 | Android          | There is no app to open this file. |
+| OS-PLUG-FLVW-0011 | iOS              | Cordova / Capacitor bridge isn’t initialized. |
+| OS-PLUG-FLVW-0012 | iOS              | The download failed. |
+| OS-PLUG-FLVW-0013 | iOS              | The file has no extension. |
