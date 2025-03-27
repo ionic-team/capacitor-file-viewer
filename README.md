@@ -35,7 +35,7 @@ npx cap sync
 ```typescript
 import { FileViewer } from "@capacitor/file-viewer";
 
-// can use a plugin @capacitor/filesystem to get the full path to the file
+// can use a plugin like @capacitor/filesystem to get the full path to the file
 const openDocument = async () => {
   await FileViewer.openDocumentFromLocalPath({
     path: "path/to/file.pdf"
@@ -44,7 +44,7 @@ const openDocument = async () => {
 
 // ios-specific
 const previewMedia = async () => {
-  await FileViewer.previewMediaFromUrl({
+  await FileViewer.previewMediaContentFromUrl({
     path: "https://url_hosting_media/file.mp4"
   });
 }
