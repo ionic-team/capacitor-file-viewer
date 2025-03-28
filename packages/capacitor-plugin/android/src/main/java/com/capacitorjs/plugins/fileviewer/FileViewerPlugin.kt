@@ -35,6 +35,7 @@ class FileViewerPlugin : Plugin() {
     fun openDocumentFromResources(call: PluginCall) {
         val resourcePath: String? = call.getString("path")
         checkPreconditionsAndRun(call) { activity ->
+            // this method needs to be called from a non-UI thread, because it can involve I/O operations.
             ioScope.launch {
                 controller.openDocumentFromResources(activity, assetPath = resourcePath ?: "")
                     .handleResult(call)
