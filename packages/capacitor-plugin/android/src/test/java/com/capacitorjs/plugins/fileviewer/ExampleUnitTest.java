@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.capacitorjs.plugins.fileviewer;
 
 import static org.junit.Assert.*;
 
