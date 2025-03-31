@@ -54,6 +54,9 @@
     "prepublishOnly": "npm run build",
     "semantic-release": "semantic-release"
   },
+  "dependencies": {
+    "@capacitor/synapse": "^1.0.2"
+  },
   "devDependencies": {
     "@capacitor/android": "^7.0.0",
     "@capacitor/core": "^7.0.0",
