@@ -15,9 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "IONFileViewerLib",
-            // url: "https://github.com/ionic-team/ion-ios-fileviewer/releases/download/1.0.0/IONFileViewerLib.zip",
-            // checksum: "<compute_checksum>" // sha-256
-            path: "./ios/Sources/FileViewerPlugin/IONFileViewerLib.xcframework"
+            url: "https://github.com/ionic-team/ion-ios-fileviewer/releases/download/1.0.0/IONFileViewerLib.zip",
+            checksum: "02728411a63b4dcb630251d6b37f0ea173804a6408d916a0ba3f1ea9d4301b1a" // sha-256
         ),
         .target(
             name: "FileViewerPlugin",
