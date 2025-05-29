@@ -10,13 +10,13 @@ let package = Package(
             targets: ["FileViewerPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "7.0.0")
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "7.1.0")
     ],
     targets: [
         .binaryTarget(
             name: "IONFileViewerLib",
-            url: "https://github.com/ionic-team/ion-ios-fileviewer/releases/download/1.0.0/IONFileViewerLib.zip",
-            checksum: "02728411a63b4dcb630251d6b37f0ea173804a6408d916a0ba3f1ea9d4301b1a" // sha-256
+            url: "https://github.com/ionic-team/ion-ios-fileviewer/releases/download/1.0.1/IONFileViewerLib.zip",
+            checksum: "2dcd0291e664ffbb5636119f147eda266e0d2284aa53a9c99925d0e442a0e92d" // sha-256
         ),
         .target(
             name: "FileViewerPlugin",
