@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.1...v1.0.2)
+
+- Set dependency on @capacitor/synapse to 1.0.3 to fix ssr environments
+
 # [1.0.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.0...v1.0.1)
 
 - Fix(ios): Remove duplicate path separators that could cause files to not be found.
