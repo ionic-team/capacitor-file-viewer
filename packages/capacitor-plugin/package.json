@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/file-viewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The FileViewer API provides mechanisms for opening files and previewing media. Not available on web.",
   "main": "./dist/plugin.cjs",
   "module": "./dist/plugin.mjs",
@@ -55,7 +55,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@capacitor/synapse": "^1.0.2"
+    "@capacitor/synapse": "^1.0.3"
   },
   "devDependencies": {
     "@capacitor/android": "^7.0.0",
