@@ -85,7 +85,7 @@
     "vite-plugin-dts": "^4.4.0"
   },
   "peerDependencies": {
-    "@capacitor/core": "^7.0.0"
+    "@capacitor/core": ">=7.0.0"
   },
   "overrides": {
     "vite": {
