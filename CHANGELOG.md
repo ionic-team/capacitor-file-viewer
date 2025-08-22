@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.3...v1.0.4) (2025-08-22)
+
+
+### Bug Fixes
+
+* export package.json to fix cap sync issues ([#11](https://github.com/ionic-team/capacitor-file-viewer/issues/11)) ([bb9b222](https://github.com/ionic-team/capacitor-file-viewer/commit/bb9b2221abaaa3ea9aee8e81ce913df45146967b))
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
