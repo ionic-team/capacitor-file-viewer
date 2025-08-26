@@ -5,11 +5,6 @@
 
 * export package.json to fix cap sync issues ([#11](https://github.com/ionic-team/capacitor-file-viewer/issues/11)) ([bb9b222](https://github.com/ionic-team/capacitor-file-viewer/commit/bb9b2221abaaa3ea9aee8e81ce913df45146967b))
 
-# Change Log
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## [1.0.3](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.2...v1.0.3) (2025-08-20)
 
 
