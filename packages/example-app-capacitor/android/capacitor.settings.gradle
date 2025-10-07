@@ -9,4 +9,4 @@ include ':capacitor-splash-screen'
 project(':capacitor-splash-screen').projectDir = new File('../node_modules/@capacitor/splash-screen/android')
 
 include ':capacitor-file-viewer'
-project(':capacitor-file-viewer').projectDir = new File('../node_modules/@capacitor/file-viewer/android')
+project(':capacitor-file-viewer').projectDir = new File('../../capacitor-plugin/android')
