@@ -1,3 +1,11 @@
+# [2.0.0-next.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-next.1...v2.0.0-next.2) (2025-10-08)
+
+
+### Bug Fixes
+
+* **ios:** Opening local files without file:// ([#14](https://github.com/ionic-team/capacitor-file-viewer/issues/14)) ([ea3cab2](https://github.com/ionic-team/capacitor-file-viewer/commit/ea3cab2a3f92fe739d3009bbcaa27cb41209f759))
+* **ios:** Simplify SPM usage for native library ([#13](https://github.com/ionic-team/capacitor-file-viewer/issues/13)) ([d4f3d78](https://github.com/ionic-team/capacitor-file-viewer/commit/d4f3d7860ee4ecedaf23bd702426ba543f2407af))
+
 ## [1.0.5](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.4...v1.0.5) (2025-10-08)
 
 
