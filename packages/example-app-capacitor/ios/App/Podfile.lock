@@ -4,7 +4,7 @@ PODS:
   - CapacitorCamera (8.0.0-alpha.1):
     - Capacitor
   - CapacitorCordova (8.0.0-alpha.2)
-  - CapacitorFileViewer (1.0.4):
+  - CapacitorFileViewer (2.0.0-next.1):
     - Capacitor
     - IONFileViewerLib (~> 1.0.3)
   - CapacitorSplashScreen (8.0.0-alpha.1):
@@ -38,10 +38,10 @@ SPEC CHECKSUMS:
   Capacitor: f88db94b173c6d2c97003248197f749674d42dc8
   CapacitorCamera: f072b76519f1a5981becb6caa3ab10c79622ae66
   CapacitorCordova: 9b60d7dd7f5035cefe9b5f7f3edf11ccd93b6ae6
-  CapacitorFileViewer: 9ecc211750f424816165173a7caded128e58a4ce
+  CapacitorFileViewer: 6f52990036dcccd3ab75eb5a0462303f973abd17
   CapacitorSplashScreen: 6a9a07f9b1313faad49dde7bb8f12b7c4fcc3acf
   IONFileViewerLib: 574758ebcaa4b1543669b1c9708f1970e1172b29
 
-PODFILE CHECKSUM: 77a7484d3339f92395579b7104fae0ab5447d5b7
+PODFILE CHECKSUM: 3fa401d40e3f9671013dddabaada04139bda02a6
 
 COCOAPODS: 1.16.2
