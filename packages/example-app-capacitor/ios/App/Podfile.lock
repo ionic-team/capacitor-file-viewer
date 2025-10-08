@@ -6,10 +6,10 @@ PODS:
   - CapacitorCordova (8.0.0-alpha.2)
   - CapacitorFileViewer (1.0.4):
     - Capacitor
-    - IONFileViewerLib (~> 1.0.1)
+    - IONFileViewerLib (~> 1.0.3)
   - CapacitorSplashScreen (8.0.0-alpha.1):
     - Capacitor
-  - IONFileViewerLib (1.0.1)
+  - IONFileViewerLib (1.0.3)
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
@@ -40,7 +40,7 @@ SPEC CHECKSUMS:
   CapacitorCordova: 9b60d7dd7f5035cefe9b5f7f3edf11ccd93b6ae6
   CapacitorFileViewer: 9ecc211750f424816165173a7caded128e58a4ce
   CapacitorSplashScreen: 6a9a07f9b1313faad49dde7bb8f12b7c4fcc3acf
-  IONFileViewerLib: 9e6b09451afa7705545d4d20e2974b4f1555390c
+  IONFileViewerLib: 574758ebcaa4b1543669b1c9708f1970e1172b29
 
 PODFILE CHECKSUM: 77a7484d3339f92395579b7104fae0ab5447d5b7
 
