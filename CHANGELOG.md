@@ -1,3 +1,10 @@
+# [2.0.0-development.4](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-development.3...v2.0.0-development.4) (2025-10-22)
+
+
+### Bug Fixes
+
+* Use node 24 for CI ([4544e7a](https://github.com/ionic-team/capacitor-file-viewer/commit/4544e7afd72b727546a9c7a49ec186d5c8d6c615))
+
 # [2.0.0-development.3](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-development.2...v2.0.0-development.3) (2025-10-22)
 
 
