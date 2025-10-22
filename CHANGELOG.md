@@ -1,3 +1,16 @@
+# [2.0.0-development.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.5...v2.0.0-development.1) (2025-10-22)
+
+
+### Features
+
+* Capacitor 8 support ([47720e8](https://github.com/ionic-team/capacitor-file-viewer/commit/47720e873525a1a12e10c743ac378ccd3f852d4d))
+* Support trusted publishing ([4b40f75](https://github.com/ionic-team/capacitor-file-viewer/commit/4b40f758a789b2ef2a6a615192a7ecbe19547f3e))
+
+
+### BREAKING CHANGES
+
+* Capacitor major version update requires major version update on the plugin.
+
 # [2.0.0-next.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-next.1...v2.0.0-next.2) (2025-10-08)
 
 
