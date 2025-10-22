@@ -45,7 +45,7 @@ const openDocument = async () => {
 // ios-specific
 const previewMedia = async () => {
   await FileViewer.previewMediaContentFromUrl({
-    path: "https://url_hosting_media/file.mp4"
+    path: "https://url_hosting_media.com/file.mp4"
   });
 }
 ```
