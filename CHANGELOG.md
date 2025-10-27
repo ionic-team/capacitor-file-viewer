@@ -1,3 +1,10 @@
+# [2.0.0-development.5](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-development.4...v2.0.0-development.5) (2025-10-27)
+
+
+### Bug Fixes
+
+* Update description ([12b171e](https://github.com/ionic-team/capacitor-file-viewer/commit/12b171e3942d37c43dc1716a64f64aa1f50ea617))
+
 # [2.0.0-development.4](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-development.3...v2.0.0-development.4) (2025-10-22)
 
 
