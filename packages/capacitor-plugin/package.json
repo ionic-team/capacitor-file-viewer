@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/file-viewer",
-  "version": "2.0.0-development.5",
+  "version": "2.0.0-development.6",
   "description": "The FileViewer API provides mechanisms for opening files and previewing media. Not available for Web.",
   "main": "./dist/plugin.cjs",
   "module": "./dist/plugin.mjs",
