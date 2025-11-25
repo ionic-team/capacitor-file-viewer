@@ -1,3 +1,24 @@
+# [2.0.0-next.3](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-next.3...v2.0.0-next.4) (2025-11-17)
+
+
+* **android:** Update gradle dependencies to latest versions
+* **ios:** Minor updates to Package.swift
+
+# [2.0.0-next.3](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-next.2...v2.0.0-next.3) (2025-11-10)
+
+
+### Bug Fixes
+
+* **android:** use 'propName = value' assignment syntax in build.gradle files ([4b967f4](https://github.com/ionic-team/capacitor-file-viewer/commit/4b967f49917dc703b962d15926875090b31fe070))
+
+# [2.0.0-next.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-next.1...v2.0.0-next.2) (2025-10-08)
+
+
+### Bug Fixes
+
+* **ios:** Opening local files without file:// ([#14](https://github.com/ionic-team/capacitor-file-viewer/issues/14)) ([ea3cab2](https://github.com/ionic-team/capacitor-file-viewer/commit/ea3cab2a3f92fe739d3009bbcaa27cb41209f759))
+* **ios:** Simplify SPM usage for native library ([#13](https://github.com/ionic-team/capacitor-file-viewer/issues/13)) ([d4f3d78](https://github.com/ionic-team/capacitor-file-viewer/commit/d4f3d7860ee4ecedaf23bd702426ba543f2407af))
+
 ## [1.0.5](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.4...v1.0.5) (2025-10-08)
 
 
@@ -5,6 +26,18 @@
 
 * **ios:** Opening local files without file:// ([#14](https://github.com/ionic-team/capacitor-file-viewer/issues/14)) ([ea3cab2](https://github.com/ionic-team/capacitor-file-viewer/commit/ea3cab2a3f92fe739d3009bbcaa27cb41209f759))
 * **ios:** Simplify SPM usage for native library ([#13](https://github.com/ionic-team/capacitor-file-viewer/issues/13)) ([d4f3d78](https://github.com/ionic-team/capacitor-file-viewer/commit/d4f3d7860ee4ecedaf23bd702426ba543f2407af))
+
+# [2.0.0-next.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.4...v2.0.0-next.1) (2025-09-09)
+
+
+### Features
+
+* Capacitor 8 support ([47720e8](https://github.com/ionic-team/capacitor-file-viewer/commit/47720e873525a1a12e10c743ac378ccd3f852d4d))
+
+
+### BREAKING CHANGES
+
+* Capacitor major version update requires major version update on the plugin.
 
 ## [1.0.4](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.3...v1.0.4) (2025-08-22)
 

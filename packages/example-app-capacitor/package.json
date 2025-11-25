@@ -12,16 +12,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/android": "7.0.0",
-    "@capacitor/camera": "7.0.0",
-    "@capacitor/core": "7.0.0",
-    "@capacitor/ios": "7.0.0",
-    "@capacitor/splash-screen": "7.0.0",
+    "@capacitor/android": "next",
+    "@capacitor/camera": "next",
+    "@capacitor/core": "next",
+    "@capacitor/ios": "next",
+    "@capacitor/splash-screen": "next",
     "@capacitor/file-viewer": "file:../capacitor-plugin"
   },
   "devDependencies": {
-    "@capacitor/cli": "latest",
-    "vite": "^7.2.2"
+    "@capacitor/cli": "next",
+    "vite": "^5.4.2"
   },
   "author": "",
   "license": "ISC"

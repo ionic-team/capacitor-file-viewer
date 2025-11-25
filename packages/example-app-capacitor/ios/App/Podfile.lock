@@ -1,13 +1,13 @@
 PODS:
-  - Capacitor (7.0.0):
+  - Capacitor (8.0.0-alpha.2):
     - CapacitorCordova
-  - CapacitorCamera (7.0.0):
+  - CapacitorCamera (8.0.0-alpha.1):
     - Capacitor
-  - CapacitorCordova (7.0.0)
-  - CapacitorFileViewer (1.0.4):
+  - CapacitorCordova (8.0.0-alpha.2)
+  - CapacitorFileViewer (2.0.0-next.1):
     - Capacitor
     - IONFileViewerLib (~> 1.0.3)
-  - CapacitorSplashScreen (7.0.0):
+  - CapacitorSplashScreen (8.0.0-alpha.1):
     - Capacitor
   - IONFileViewerLib (1.0.3)
 
@@ -35,13 +35,13 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/splash-screen"
 
 SPEC CHECKSUMS:
-  Capacitor: fcbee427ff437f414bbb3bc2d39364ad9bd2b8a5
-  CapacitorCamera: 777ddf61d727754fcda0b92303ae09ea3765d7b7
-  CapacitorCordova: 345f93b7edd121db98e4ec20ac94d6d7bcaf7e48
-  CapacitorFileViewer: 346f0bf5e3520be1ad86f8299f2990b4936cba34
-  CapacitorSplashScreen: f4e58cc02aafd91c7cbaf32a3d1b44d02a115125
+  Capacitor: f88db94b173c6d2c97003248197f749674d42dc8
+  CapacitorCamera: f072b76519f1a5981becb6caa3ab10c79622ae66
+  CapacitorCordova: 9b60d7dd7f5035cefe9b5f7f3edf11ccd93b6ae6
+  CapacitorFileViewer: 6f52990036dcccd3ab75eb5a0462303f973abd17
+  CapacitorSplashScreen: 6a9a07f9b1313faad49dde7bb8f12b7c4fcc3acf
   IONFileViewerLib: 574758ebcaa4b1543669b1c9708f1970e1172b29
 
-PODFILE CHECKSUM: 77a7484d3339f92395579b7104fae0ab5447d5b7
+PODFILE CHECKSUM: 3fa401d40e3f9671013dddabaada04139bda02a6
 
 COCOAPODS: 1.16.2
