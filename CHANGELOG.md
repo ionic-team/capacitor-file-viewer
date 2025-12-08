@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.5...v2.0.0) (2025-12-08)
+
+
+### Bug Fixes
+
+* **android:** use 'propName = value' assignment syntax in build.gradle files ([4b967f4](https://github.com/ionic-team/capacitor-file-viewer/commit/4b967f49917dc703b962d15926875090b31fe070))
+
+
+### Features
+
+* Capacitor 8 support ([47720e8](https://github.com/ionic-team/capacitor-file-viewer/commit/47720e873525a1a12e10c743ac378ccd3f852d4d))
+
+
+### BREAKING CHANGES
+
+* Capacitor major version update requires major version update on the plugin.
+
 # [2.0.0-next.3](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0-next.3...v2.0.0-next.4) (2025-11-17)
 
 
