@@ -26,7 +26,7 @@
 ## Install
 
 ```bash
-npm install @capacitor/file-viewer
+npm install @capacitor/file-viewer@latest-7
 npx cap sync
 ```
 
