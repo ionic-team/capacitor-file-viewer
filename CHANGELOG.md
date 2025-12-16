@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.5...v1.0.6) (2025-12-16)
+
+
+### Bug Fixes
+
+* Use latest-7 for 1.x docs ([#25](https://github.com/ionic-team/capacitor-file-viewer/issues/25)) ([2808228](https://github.com/ionic-team/capacitor-file-viewer/commit/2808228f1fca701c0a6ba1387c1f4873f246572a))
+
 ## [1.0.5](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.4...v1.0.5) (2025-10-08)
 
 
