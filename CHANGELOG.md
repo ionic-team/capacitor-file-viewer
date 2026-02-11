@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.6...v1.0.7) (2026-02-11)
+
+
+### Bug Fixes
+
+* **android:** AGP 9.0 no longer supporting `proguard-android.txt` ([#27](https://github.com/ionic-team/capacitor-file-viewer/issues/27)) ([9076380](https://github.com/ionic-team/capacitor-file-viewer/commit/9076380a4f1495937f2443ffd41099673e2ba7c5))
+
 ## [1.0.6](https://github.com/ionic-team/capacitor-file-viewer/compare/v1.0.5...v1.0.6) (2025-12-16)
 
 
