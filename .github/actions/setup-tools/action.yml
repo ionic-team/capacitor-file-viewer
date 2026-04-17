@@ -10,7 +10,7 @@ runs:
         node-version: 24 # semantic-release requires at least this version, or 22 LTS
     - name: Update npm # To ensure npm 11.5.1 or later is installed for Trusted publishing
       shell: bash
-      run: npm install -g npm@latest
+      run: npm install -g npm@~11.10.0
     - name: Install dependencies
       working-directory: ./packages/capacitor-plugin
       shell: bash
