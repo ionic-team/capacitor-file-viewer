@@ -36,7 +36,7 @@ private extension FileViewerError {
         case .couldNotOpenDocument: "Could not open the document."
         case .downloadFailed: "The download failed."
         case .missingFileExtension: "The file has no extension."
-        case .bridgeNotInitialised: "Cordova bridge isn't initialized."
+        case .bridgeNotInitialised: "Capacitor bridge isn't initialized."
         }
     }
 }
