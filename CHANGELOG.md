@@ -1,3 +1,10 @@
+## [2.0.2-next.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.1...v2.0.2-next.1) (2026-07-23)
+
+
+### Bug Fixes
+
+* **ios:** bridge not initialized error message ([#36](https://github.com/ionic-team/capacitor-file-viewer/issues/36)) ([a283608](https://github.com/ionic-team/capacitor-file-viewer/commit/a2836084d821de8e87288617c0ce82e124a95d78))
+
 ## [2.0.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.0...v2.0.1) (2026-02-11)
 
 
