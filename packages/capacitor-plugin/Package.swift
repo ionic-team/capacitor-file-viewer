@@ -10,7 +10,7 @@ let package = Package(
             targets: ["FileViewerPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "9.0.0-alpha.5"),
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "9.0.0-alpha.6"),
         .package(url: "https://github.com/ionic-team/ion-ios-fileviewer.git", from: "1.0.3")
     ],
     targets: [
