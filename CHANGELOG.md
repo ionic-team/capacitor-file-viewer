@@ -1,3 +1,10 @@
+# [2.1.0-next.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.2-next.1...v2.1.0-next.1) (2026-07-24)
+
+
+### Features
+
+* use 9.0.0-alpha.6 dependency ([#37](https://github.com/ionic-team/capacitor-file-viewer/issues/37)) ([92ece1d](https://github.com/ionic-team/capacitor-file-viewer/commit/92ece1dbd43df6aa2ddd07becffd3ac9ab896f59))
+
 ## [2.0.2-next.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.1...v2.0.2-next.1) (2026-07-23)
 
 
