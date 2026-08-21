@@ -1,3 +1,20 @@
+# [3.0.0-next.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.1.0-next.1...v3.0.0-next.1) (2026-08-21)
+
+
+### Bug Fixes
+
+* **android:** only apply kotlin-android plugin if not already applied ([#32](https://github.com/ionic-team/capacitor-file-viewer/issues/32)) ([d9befb0](https://github.com/ionic-team/capacitor-file-viewer/commit/d9befb09d748ec50b97f7939b3a48e95b13a95bc))
+
+
+### Features
+
+* Bump major version to 3 ([e1b6d14](https://github.com/ionic-team/capacitor-file-viewer/commit/e1b6d1434a23dd4d46d7813037c61ac41dd91cae))
+
+
+### BREAKING CHANGES
+
+* This version includes support for Capacitor 9, which requires a major version bump.
+
 ## [2.0.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.1...v2.0.2) (2026-08-19)
 
 
