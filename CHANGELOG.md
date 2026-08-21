@@ -1,3 +1,11 @@
+## [2.0.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.1...v2.0.2) (2026-08-19)
+
+
+### Bug Fixes
+
+* **android:** only apply kotlin-android plugin if not already applied ([#32](https://github.com/ionic-team/capacitor-file-viewer/issues/32)) ([d9befb0](https://github.com/ionic-team/capacitor-file-viewer/commit/d9befb09d748ec50b97f7939b3a48e95b13a95bc))
+* **ios:** bridge not initialized error message ([#36](https://github.com/ionic-team/capacitor-file-viewer/issues/36)) ([a283608](https://github.com/ionic-team/capacitor-file-viewer/commit/a2836084d821de8e87288617c0ce82e124a95d78))
+
 # [2.1.0-next.1](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.2-next.1...v2.1.0-next.1) (2026-07-24)
 
 
