@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.2...v2.0.3) (2026-09-09)
+
+
+### Bug Fixes
+
+* **ios:** openDocumentFromUrl when extension is unresolvable ([#39](https://github.com/ionic-team/capacitor-file-viewer/issues/39)) ([36d2a42](https://github.com/ionic-team/capacitor-file-viewer/commit/36d2a42e87655339f924cb651df8df6c9ef18884))
+
 ## [2.0.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.1...v2.0.2) (2026-08-19)
 
 
