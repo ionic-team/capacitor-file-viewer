@@ -1,3 +1,11 @@
+# [3.0.0-next.2](https://github.com/ionic-team/capacitor-file-viewer/compare/v3.0.0-next.1...v3.0.0-next.2) (2026-10-02)
+
+
+### Bug Fixes
+
+* **ios:** openDocumentFromUrl when extension is unresolvable ([#39](https://github.com/ionic-team/capacitor-file-viewer/issues/39)) ([36d2a42](https://github.com/ionic-team/capacitor-file-viewer/commit/36d2a42e87655339f924cb651df8df6c9ef18884))
+* **ios:** update native lib to latest version ([#42](https://github.com/ionic-team/capacitor-file-viewer/issues/42)) ([0aa2ed5](https://github.com/ionic-team/capacitor-file-viewer/commit/0aa2ed584f0e269bb92275dcb2bac31b1f42e6c1))
+
 ## [2.0.4](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.3...v2.0.4) (2026-10-02)
 
 
