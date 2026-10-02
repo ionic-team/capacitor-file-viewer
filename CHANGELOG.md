@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.3...v2.0.4) (2026-10-02)
+
+
+### Bug Fixes
+
+* **ios:** update native lib to latest version ([#42](https://github.com/ionic-team/capacitor-file-viewer/issues/42)) ([0aa2ed5](https://github.com/ionic-team/capacitor-file-viewer/commit/0aa2ed584f0e269bb92275dcb2bac31b1f42e6c1))
+
 ## [2.0.3](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.2...v2.0.3) (2026-09-09)
 
 
