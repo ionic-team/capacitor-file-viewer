@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor.git", from: "9.0.0-alpha.7"),
-        .package(url: "https://github.com/ionic-team/ion-ios-fileviewer.git", from: "1.0.3")
+        .package(url: "https://github.com/ionic-team/ion-ios-fileviewer.git", from: "2.0.0")
     ],
     targets: [
         .target(
