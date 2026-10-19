@@ -1,25 +1,25 @@
 PODS:
-  - Capacitor (8.0.0-alpha.2):
-    - CapacitorCordova
-  - CapacitorCamera (8.0.0-alpha.1):
+  - Capacitor (9.0.0-alpha.8)
+  - CapacitorCamera (8.2.6-next.1):
     - Capacitor
-  - CapacitorCordova (8.0.0-alpha.2)
-  - CapacitorFileViewer (2.0.0-next.1):
+    - IONCameraLib (~> 2.0.0)
+  - CapacitorFileViewer (3.0.0-next.2):
     - Capacitor
-    - IONFileViewerLib (~> 1.0.3)
-  - CapacitorSplashScreen (8.0.0-alpha.1):
+    - IONFileViewerLib (~> 2.0.0)
+  - CapacitorSplashScreen (9.0.0-alpha.2):
     - Capacitor
-  - IONFileViewerLib (1.0.3)
+  - IONCameraLib (2.0.0)
+  - IONFileViewerLib (2.0.0)
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorCamera (from `../../node_modules/@capacitor/camera`)"
-  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
   - CapacitorFileViewer (from `../../../capacitor-plugin`)
   - "CapacitorSplashScreen (from `../../node_modules/@capacitor/splash-screen`)"
 
 SPEC REPOS:
   trunk:
+    - IONCameraLib
     - IONFileViewerLib
 
 EXTERNAL SOURCES:
@@ -27,21 +27,19 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/ios"
   CapacitorCamera:
     :path: "../../node_modules/@capacitor/camera"
-  CapacitorCordova:
-    :path: "../../node_modules/@capacitor/ios"
   CapacitorFileViewer:
     :path: "../../../capacitor-plugin"
   CapacitorSplashScreen:
     :path: "../../node_modules/@capacitor/splash-screen"
 
 SPEC CHECKSUMS:
-  Capacitor: f88db94b173c6d2c97003248197f749674d42dc8
-  CapacitorCamera: f072b76519f1a5981becb6caa3ab10c79622ae66
-  CapacitorCordova: 9b60d7dd7f5035cefe9b5f7f3edf11ccd93b6ae6
-  CapacitorFileViewer: 6f52990036dcccd3ab75eb5a0462303f973abd17
-  CapacitorSplashScreen: 6a9a07f9b1313faad49dde7bb8f12b7c4fcc3acf
-  IONFileViewerLib: 574758ebcaa4b1543669b1c9708f1970e1172b29
+  Capacitor: 6055803e09f7572c213eb845e62563d70ecfbe8e
+  CapacitorCamera: 7b9352f57ef44416882b8b6701fd326260325188
+  CapacitorFileViewer: 8a75c82dae4b4e9d5f59228758728e71bc72db73
+  CapacitorSplashScreen: d7ff270db07a5070e44f28abcd8f0bddb2edc846
+  IONCameraLib: 729cae576e1a952602ce750a9790b6dc7d7e2e95
+  IONFileViewerLib: 665aa5918754112a5c1bba18860aa78c830c961e
 
-PODFILE CHECKSUM: 3fa401d40e3f9671013dddabaada04139bda02a6
+PODFILE CHECKSUM: 598a66fca30bc414f4866ed164a27289ed3665d9
 
 COCOAPODS: 1.16.2
