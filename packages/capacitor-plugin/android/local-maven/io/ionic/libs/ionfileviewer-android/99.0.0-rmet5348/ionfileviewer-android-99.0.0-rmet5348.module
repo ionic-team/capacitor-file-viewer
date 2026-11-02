@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.ionic.libs",
+    "module": "ionfileviewer-android",
+    "version": "99.0.0-rmet5348",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.25"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ionfileviewer-android-99.0.0-rmet5348.aar",
+          "url": "ionfileviewer-android-99.0.0-rmet5348.aar",
+          "size": 18826,
+          "sha512": "e2965d26af19fe6e9303ba5c41a18fd2a3050798bf062d79f98277a99f6aa42ffa863011aea49a587c599ee4689d7337e340ea21fc88c0f5526c29d8a15fb264",
+          "sha256": "0700a7b9459bb9258c2cfda4a5806620cd15c4ee4807dfb6f8b17b52fcdf215a",
+          "sha1": "8314a312a1214d7409272dbc6464d752e3e99289",
+          "md5": "8064d7b5a59864937f0a17b024870c95"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.16.0"
+          }
+        },
+        {
+          "group": "androidx.activity",
+          "module": "activity-ktx",
+          "version": {
+            "requires": "1.10.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.25"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ionfileviewer-android-99.0.0-rmet5348.aar",
+          "url": "ionfileviewer-android-99.0.0-rmet5348.aar",
+          "size": 18826,
+          "sha512": "e2965d26af19fe6e9303ba5c41a18fd2a3050798bf062d79f98277a99f6aa42ffa863011aea49a587c599ee4689d7337e340ea21fc88c0f5526c29d8a15fb264",
+          "sha256": "0700a7b9459bb9258c2cfda4a5806620cd15c4ee4807dfb6f8b17b52fcdf215a",
+          "sha1": "8314a312a1214d7409272dbc6464d752e3e99289",
+          "md5": "8064d7b5a59864937f0a17b024870c95"
+        }
+      ]
+    }
+  ]
+}
