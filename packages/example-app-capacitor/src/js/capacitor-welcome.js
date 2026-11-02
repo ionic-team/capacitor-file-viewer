@@ -1,5 +1,9 @@
 import { SplashScreen } from '@capacitor/splash-screen';
 import { Camera } from '@capacitor/camera';
+import { FileViewer } from '@capacitor/file-viewer';
+
+const SAMPLE_PDF_URL = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf';
+const SAMPLE_VIDEO_URL = 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4';
 
 window.customElements.define(
   'capacitor-welcome',
@@ -30,6 +34,7 @@ window.customElements.define(
         font-size: 0.9em;
         border: 0;
         border-radius: 3px;
+        margin: 0 4px 8px 0;
         text-decoration: none;
         cursor: pointer;
       }
@@ -57,57 +62,57 @@ window.customElements.define(
     </style>
     <div>
       <capacitor-welcome-titlebar>
-        <h1>Capacitor</h1>
+        <h1>File Viewer</h1>
       </capacitor-welcome-titlebar>
       <main>
+        <h2>Documents</h2>
         <p>
-          Capacitor makes it easy to build powerful apps for the app stores, mobile web (Progressive Web Apps), and desktop, all
-          with a single code base.
+          <button class="button" data-method="openDocumentFromUrl">Open PDF from URL</button>
+          <button class="button" data-method="openDocumentFromResources">Open PDF from resources</button>
+          <button class="button" data-method="openDocumentFromLocalPath">Take a photo and open it</button>
         </p>
-        <h2>Getting Started</h2>
+        <h2>Media</h2>
         <p>
-          You'll probably need a UI framework to build a full-featured app. Might we recommend
-          <a target="_blank" href="http://ionicframework.com/">Ionic</a>?
+          <button class="button" data-method="previewMediaContentFromUrl">Preview video from URL</button>
+          <button class="button" data-method="previewMediaContentFromResources">Preview video from resources</button>
+          <button class="button" data-method="previewMediaContentFromLocalPath">Record a video and preview it</button>
         </p>
+        <h2>Errors</h2>
         <p>
-          Visit <a href="https://capacitorjs.com">capacitorjs.com</a> for information
-          on using native features, building plugins, and more.
+          <button class="button" data-method="missingResource">Open a missing resource</button>
         </p>
-        <a href="https://capacitorjs.com" target="_blank" class="button">Read more</a>
-        <h2>Tiny Demo</h2>
-        <p>
-          This demo shows how to call Capacitor plugins. Say cheese!
-        </p>
-        <p>
-          <button class="button" id="take-photo">Take Photo</button>
-        </p>
-        <p>
-          <img id="image" style="max-width: 100%">
-        </p>
+        <pre id="result"></pre>
       </main>
     </div>
     `;
     }
 
     connectedCallback() {
-      const self = this;
+      const result = this.shadowRoot.querySelector('#result');
+      const calls = {
+        openDocumentFromUrl: () => FileViewer.openDocumentFromUrl({ url: SAMPLE_PDF_URL }),
+        openDocumentFromResources: () => FileViewer.openDocumentFromResources({ path: 'public/files/sample.pdf' }),
+        openDocumentFromLocalPath: async () =>
+          FileViewer.openDocumentFromLocalPath({ path: (await Camera.getPhoto({ resultType: 'uri' })).path }),
+        previewMediaContentFromUrl: () => FileViewer.previewMediaContentFromUrl({ url: SAMPLE_VIDEO_URL }),
+        previewMediaContentFromResources: () =>
+          FileViewer.previewMediaContentFromResources({ path: 'public/files/sample.mp4' }),
+        previewMediaContentFromLocalPath: async () =>
+          FileViewer.previewMediaContentFromLocalPath({ path: (await Camera.recordVideo({})).uri }),
+        missingResource: () => FileViewer.openDocumentFromResources({ path: 'public/files/missing.pdf' }),
+      };
 
-      self.shadowRoot.querySelector('#take-photo').addEventListener('click', async function (e) {
-        try {
-          const photo = await Camera.getPhoto({
-            resultType: 'uri',
-          });
-
-          const image = self.shadowRoot.querySelector('#image');
-          if (!image) {
-            return;
+      this.shadowRoot.querySelectorAll('[data-method]').forEach((button) =>
+        button.addEventListener('click', async () => {
+          const method = button.dataset.method;
+          try {
+            await calls[method]();
+            result.textContent = `${method}: success`;
+          } catch (e) {
+            result.textContent = `${method}: ${e.code ?? 'error'} ${e.message}`;
           }
-
-          image.src = photo.webPath;
-        } catch (e) {
-          console.warn('User cancelled', e);
-        }
-      });
+        }),
+      );
     }
   },
 );
@@ -123,7 +128,7 @@ window.customElements.define(
       :host {
         position: relative;
         display: block;
-        padding: 15px 15px 15px 15px;
+        padding: calc(15px + env(safe-area-inset-top)) 15px 15px 15px;
         text-align: center;
         background-color: #73B5F6;
       }

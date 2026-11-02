@@ -1,7 +1,7 @@
 {
   "name": "capacitor-file-viewer-example-app",
   "version": "1.0.0",
-  "description": "Currently this application is not implemented yet",
+  "description": "Example app that calls every FileViewer method",
   "keywords": [
     "capacitor",
     "mobile"
