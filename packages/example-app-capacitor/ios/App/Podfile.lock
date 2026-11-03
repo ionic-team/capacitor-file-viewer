@@ -1,6 +1,6 @@
 PODS:
-  - Capacitor (9.0.0-alpha.8)
-  - CapacitorCamera (8.2.6-next.1):
+  - Capacitor (9.0.0-beta.0)
+  - CapacitorCamera (8.2.6-next.2):
     - Capacitor
     - IONCameraLib (~> 2.0.0)
   - CapacitorFileViewer (3.0.0-next.2):
@@ -33,8 +33,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/splash-screen"
 
 SPEC CHECKSUMS:
-  Capacitor: 6055803e09f7572c213eb845e62563d70ecfbe8e
-  CapacitorCamera: 7b9352f57ef44416882b8b6701fd326260325188
+  Capacitor: 99cf3d4c60fdccb9c06541e1b353cd6beafa31c8
+  CapacitorCamera: 1e2cd610753065cb596257028b97bc89a953758a
   CapacitorFileViewer: 8a75c82dae4b4e9d5f59228758728e71bc72db73
   CapacitorSplashScreen: d7ff270db07a5070e44f28abcd8f0bddb2edc846
   IONCameraLib: 729cae576e1a952602ce750a9790b6dc7d7e2e95
