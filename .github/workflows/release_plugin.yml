@@ -11,29 +11,30 @@ permissions:
 
 jobs:
   lint:
-    uses: ./.github/workflows/reusable_lint.yml
-    secrets:
-      THE_GH_RELEASE_TOKEN: ${{ secrets.CAP_GH_RELEASE_TOKEN }}
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 30
+    steps:
+      - uses: ionic-team/capacitor-actions/lint-plugin@v1.0.0
+        with:
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
 
-  build-packages:
-    uses: ./.github/workflows/reusable_build.yml
-    secrets:
-      THE_GH_RELEASE_TOKEN: ${{ secrets.CAP_GH_RELEASE_TOKEN }}
+  build:
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 30
+    steps:
+      - uses: ionic-team/capacitor-actions/build-plugin@v1.0.0
+        with:
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
   
   release:
-    needs: ['lint','build-packages']
+    needs: ['lint','build']
     runs-on: 'ubuntu-latest'
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v7
+      - uses: ionic-team/capacitor-actions/release-plugin-npm@v1.0.0
         with:
-          fetch-depth: 0
-          token: ${{ secrets.CAP_GH_RELEASE_TOKEN }}
-      - name: 'Setup Tools'
-        uses: ./.github/actions/setup-tools
-      - name: Release
-        working-directory: ./packages/capacitor-plugin
-        env:
-          GITHUB_TOKEN: ${{ secrets.CAP_GH_RELEASE_TOKEN }}
-          GH_TOKEN: ${{ secrets.CAP_GH_RELEASE_TOKEN }}
-        run: npm publish --tag next --provenance
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
+          npm-tag: next   

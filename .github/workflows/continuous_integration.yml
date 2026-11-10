@@ -6,13 +6,19 @@ on:
 
 jobs:
   lint:
-    uses: ./.github/workflows/reusable_lint.yml
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 30
+    steps:
+      - uses: ionic-team/capacitor-actions/lint-plugin@v1.0.0
+        with:
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
 
   build:
     runs-on: "ubuntu-latest"
     timeout-minutes: 30
     steps:
-      - uses: ionic-team/capacitor-actions/build-plugin@13886ebbbcde1116551127612c4a1a99b87b261b
+      - uses: ionic-team/capacitor-actions/build-plugin@v1.0.0
         with:
           working-directory: ./packages/capacitor-plugin
           gh-token: ${{ github.token }}
@@ -24,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: 'Setup Tools'
-        uses: ./.github/actions/setup-tools
+        uses: ionic-team/capacitor-actions/setup-tools@v1.0.0
       - name: 'Verify Android'
         working-directory: ./packages/capacitor-plugin
         run: npm run verify:android
@@ -36,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: 'Setup Tools'
-        uses: ./.github/actions/setup-tools
+        uses: ionic-team/capacitor-actions/setup-tools@v1.0.0
       - name: 'Verify iOS'
         working-directory: ./packages/capacitor-plugin
         run: npm run verify:ios
