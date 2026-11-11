@@ -1,7 +1,8 @@
 name: "Release Plugin"
 
 on:
-  workflow_dispatch:
+  release:
+    types: published
 
 permissions:
     contents: write
@@ -28,29 +29,8 @@ jobs:
           working-directory: ./packages/capacitor-plugin
           gh-token: ${{ github.token }}
   
-  release-please:
-    runs-on: ubuntu-latest
-    outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
-    steps:
-      - name: 'Setup Environment'
-        id: setup
-        uses: ionic-team/capacitor-actions/setup-tools@v1.0.0
-        with:
-          working-directory: ./packages/capacitor-plugin
-          gh-token: ${{ github.token }}
-      - name: Run release-please
-        id: release
-        uses: googleapis/release-please-action@v5
-        with:
-          token: ${{ github.token }}
-          config-file: ${{ github.ref_name == 'next' && 'release-please-config-next.json' || 'release-please-config.json' }}
-          manifest-file: .release-please-manifest.json
-          target-branch: ${{ github.ref_name }}
-
   release:
-    needs: [ 'release-please', 'lint', 'build']
-    if: needs.release-please.outputs.release_created == 'true'
+    needs: [ 'lint', 'build']
     runs-on: 'ubuntu-latest'
     timeout-minutes: 30
     steps:
