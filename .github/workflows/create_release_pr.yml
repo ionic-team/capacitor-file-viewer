@@ -28,6 +28,7 @@ jobs:
           gh-token: ${{ github.token }}
   
   release-please:
+    needs: ['build', 'lint']
     runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
