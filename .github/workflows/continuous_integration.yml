@@ -5,47 +5,60 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  setup:
-    uses: ./.github/workflows/reusable_setup.yml
-
   lint:
-    needs: 'setup'
-    uses: ./.github/workflows/reusable_lint.yml
-
-  build:
-    needs: 'setup'
-    uses: ./.github/workflows/reusable_build.yml
-
-  verify-plugin-android:
-    needs: ['setup', 'lint', 'build']
-    runs-on: 'macos-15'
+    runs-on: "ubuntu-latest"
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
+      - uses: ionic-team/capacitor-actions/lint-plugin@v1.0.0
+        with:
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
+
+  build:
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 30
+    steps:
+      - uses: ionic-team/capacitor-actions/build-plugin@v1.0.0
+        with:
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
+
+  verify-plugin-android:
+    needs: ['lint', 'build']
+    runs-on: 'xcode-27'
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
       - name: 'Setup Tools'
-        uses: ./.github/actions/setup-tools
+        uses: ionic-team/capacitor-actions/setup-tools@v1.0.0
+        with:
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
       - name: 'Verify Android'
         working-directory: ./packages/capacitor-plugin
         run: npm run verify:android
 
   verify-plugin-ios:
-    needs: ['setup', 'lint', 'build']
-    runs-on: 'macos-15'
+    needs: ['lint', 'build']
+    runs-on: 'xcode-27'
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: 'Setup Tools'
-        uses: ./.github/actions/setup-tools
+        uses: ionic-team/capacitor-actions/setup-tools@v1.0.0
+        with:
+          working-directory: ./packages/capacitor-plugin
+          gh-token: ${{ github.token }}
       - name: 'Verify iOS'
         working-directory: ./packages/capacitor-plugin
         run: npm run verify:ios
 
 #  build-example-app-android:
 #    needs: ['verify-plugin-ios', 'verify-plugin-android']
-#    runs-on: 'macos-15'
+#    runs-on: 'xcode-27'
 #    timeout-minutes: 30
 #    steps:
-#      - uses: actions/checkout@v5
+#      - uses: actions/checkout@v7
 #      - name: 'Setup Tools'
 #        uses: ./.github/actions/setup-tools
 #      - name: 'Prepare example app'
@@ -56,10 +69,10 @@ jobs:
     
 #  build-example-app-ios:
 #    needs: ['verify-plugin-ios', 'verify-plugin-android']
-#    runs-on: 'macos-15'
+#    runs-on: 'xcode-27'
 #    timeout-minutes: 30
 #    steps:
-#      - uses: actions/checkout@v5
+#      - uses: actions/checkout@v7
 #      - name: 'Setup Tools'
 #        uses: ./.github/actions/setup-tools
 #      - name: 'Prepare example app'

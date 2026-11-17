@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/file-viewer",
-  "version": "2.0.4",
+  "version": "3.0.0-next.2",
   "description": "The FileViewer API provides mechanisms for opening files and previewing media. Not available on web.",
   "main": "./dist/plugin.cjs",
   "module": "./dist/plugin.mjs",
@@ -22,7 +22,8 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "CapacitorFileViewer.podspec"
+    "CapacitorFileViewer.podspec",
+    "android/proguard-rules.pro"
   ],
   "author": "Ionic",
   "license": "MIT",
@@ -59,22 +60,19 @@
     "@capacitor/synapse": "^1.0.4"
   },
   "devDependencies": {
-    "@capacitor/android": "^8.0.0",
-    "@capacitor/core": "^8.0.0",
-    "@capacitor/docgen": "^0.3.0",
-    "@capacitor/ios": "^8.0.0",
+    "@capacitor/android": "next",
+    "@capacitor/core": "next",
+    "@capacitor/docgen": "^0.3.1",
+    "@capacitor/ios": "next",
     "@eslint/js": "^9.39.1",
+    "@ionic/eslint-config": "^0.5.0",
     "@rollup/wasm-node": "~4.53.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^12.0.2",
     "@semantic-release/npm": "^13.1.2",
-    "@typescript-eslint/eslint-plugin": "~8.48.0",
-    "@typescript-eslint/parser": "~8.48.0",
-    "eslint": "^9.39.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint": "^10.0.0",
     "mustache": "^4.2.0",
     "prettier": "~3.6.2",
     "prettier-plugin-java": "~2.7.7",
@@ -86,7 +84,7 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
-    "@capacitor/core": ">=8.0.0"
+    "@capacitor/core": ">=9.0.0-beta.0"
   },
   "overrides": {
     "vite": {
