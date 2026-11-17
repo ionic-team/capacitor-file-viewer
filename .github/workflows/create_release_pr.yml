@@ -7,6 +7,7 @@ permissions:
     contents: write
     issues: write
     deployments: write
+    pull-requests: write
 
 jobs:
   lint:
