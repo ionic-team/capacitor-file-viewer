@@ -30,12 +30,12 @@ jobs:
           working-directory: ./packages/capacitor-plugin
           gh-token: ${{ github.token }}
   
-  release:
+  publish:
     needs: [ 'lint', 'build']
     runs-on: 'ubuntu-latest'
     timeout-minutes: 30
     steps:
-      - uses: ionic-team/capacitor-actions/release-plugin-npm@v1.0.0
+      - uses: ionic-team/capacitor-actions/publish-plugin-npm@v1.0.0
         with:
           working-directory: ./packages/capacitor-plugin
           gh-token: ${{ github.token }}
