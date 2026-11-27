@@ -1,7 +1,9 @@
 module.exports = {
   branches: [
     // Maintenance branch for the 2.x line. main has moved to release-please for 3.x.
-    { name: '2.x', range: '2.x' },
+    // channel 'latest' keeps 2.x releases on the latest dist-tag. Without it semantic-release uses the
+    // branch name and runs `npm dist-tag add <version> release-2.x`.
+    { name: '2.x', range: '2.x', channel: 'latest' },
     { name: 'main', channel: 'latest' },
     { name: 'next', channel: 'next', prerelease: true },
     { name: 'development', channel: 'dev', prerelease: true },
