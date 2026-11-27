@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.4...v2.0.5) (2026-11-27)
+
+
+### Bug Fixes
+
+* **android:** bump ionfileviewer-android to 2.0.0 ([#56](https://github.com/ionic-team/capacitor-file-viewer/issues/56)) ([4057403](https://github.com/ionic-team/capacitor-file-viewer/commit/4057403c5035614cd4785d2dd239eaa359d0f1fe))
+
 ## [2.0.4](https://github.com/ionic-team/capacitor-file-viewer/compare/v2.0.3...v2.0.4) (2026-10-02)
 
 
