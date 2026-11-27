@@ -1,5 +1,7 @@
 module.exports = {
   branches: [
+    // Maintenance branch for the 2.x line. main has moved to release-please for 3.x.
+    { name: '2.x', range: '2.x' },
     { name: 'main', channel: 'latest' },
     { name: 'next', channel: 'next', prerelease: true },
     { name: 'development', channel: 'dev', prerelease: true },
